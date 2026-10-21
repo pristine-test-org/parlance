@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { SESSION_COOKIE } from '@/lib/session';
+import { SESSION_COOKIE } from '@/proxy';
 
 export async function POST(request: Request) {
   const { email } = (await request.json().catch(() => ({}))) as { email?: string };

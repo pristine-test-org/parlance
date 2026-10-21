@@ -4,6 +4,7 @@
  * Authentication is handled by the proxy - this layout only renders for authenticated users.
  */
 import Link from 'next/link';
+import { getEntitlementWithSubscription } from '@/lib/entitlement';
 
 const NAV = [
   ['/home', 'Home'],
@@ -15,7 +16,11 @@ const NAV = [
   ['/personas', 'Counterparts'],
 ];
 
-export default function AppLayout({ children }: { children: React.ReactNode }) {
+export default async function AppLayout({ children }: { children: React.ReactNode }) {
+  const entitlement = await getEntitlementWithSubscription().catch((error) => {
+    console.error('entitlement unavailable', error);
+    return null;
+  });
   return (
     <div className="grid min-h-dvh md:grid-cols-[14rem_1fr]">
       <aside className="border-r border-border bg-surface-sunken p-4">
@@ -30,6 +35,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <Link href="/settings" className="px-3 py-1">Settings</Link>
           <Link href="/support" className="px-3 py-1">Support</Link>
         </div>
+        {entitlement ? <p className="mt-8 px-3 text-xs text-muted-foreground">{entitlement.minutesLeft} practice minutes left</p> : null}
       </aside>
       <main className="mx-auto w-full max-w-4xl px-6 py-10">{children}</main>
     </div>
