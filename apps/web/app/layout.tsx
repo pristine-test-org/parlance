@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono, Newsreader } from 'next/font/google';
+import { AVERAGE_WINDOW } from '@/lib/voice/core-skill-average';
 import './globals.css';
 
 const newsreader = Newsreader({ subsets: ['latin'], variable: '--font-newsreader' });
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`dark ${newsreader.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="min-h-dvh antialiased">{children}</body>
+      <body className="min-h-dvh antialiased" data-average-window={AVERAGE_WINDOW}>{children}</body>
     </html>
   );
 }

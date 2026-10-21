@@ -1,3 +1,12 @@
+---
+name: Harbour Dusk
+rounded:
+  sm: 6px
+  md: 8px
+  lg: 12px
+  xl: 16px
+---
+
 # Parlance design system: Harbour Dusk
 
 Harbour Dusk is a calm, dark-first interface set on warm-sand neutrals with a 60-degree hue undertone, accented by a deep sea-teal and a sparing amber. It should feel like a quiet room before an important meeting: focused, unhurried, honest about how you did.
