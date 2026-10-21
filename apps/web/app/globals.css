@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-surface-raised: var(--surface-raised);
+  --color-border: var(--border);
+  --color-control-border: var(--control-border);
+  --color-ring: var(--ring);
+  --font-display: var(--font-newsreader), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --shadow-whisper: 0 1px 2px oklch(0 0 0 / 0.04);
+  --shadow-medium: 0 4px 12px oklch(0 0 0 / 0.08);
+}
+
+@utility shimmer-none {
+  --shimmer-text-fill: currentColor;
+}
+
+@utility focus-indicator {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@layer base {
+  :root,
+  .light {
+    --background: oklch(0.985 0.003 60);
+    --foreground: oklch(0.141 0.003 60);
+    --card: oklch(0.998 0.001 60);
+    --card-foreground: oklch(0.141 0.003 60);
+    --popover: oklch(0.998 0.001 60);
+    --popover-foreground: oklch(0.141 0.003 60);
+    --primary: oklch(0.45 0.12 200);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.945 0.002 60);
+    --secondary-foreground: oklch(0.209 0.009 60);
+    --muted: oklch(0.968 0.001 60);
+    --muted-foreground: oklch(0.52 0.013 60);
+    --accent: oklch(0.62 0.13 70);
+    --accent-foreground: oklch(0.141 0.003 60);
+    --destructive: oklch(0.52 0.208 25);
+    --destructive-foreground: oklch(0.985 0 0);
+    --surface-sunken: oklch(0.94 0.003 60);
+    --surface-raised: oklch(0.961 0.003 60);
+    --border: oklch(0.922 0.003 60);
+    --control-border: oklch(0.62 0.008 60);
+    --ring: oklch(0.45 0.12 200);
+  }
+
+  .dark {
+    --background: oklch(0.138 0.005 60);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.19 0.005 60);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.268 0.005 60);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.6 0.12 200);
+    --secondary: oklch(0.27 0.006 60);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.23 0.006 60);
+    --muted-foreground: oklch(0.714 0.011 60);
+    --accent: oklch(0.7 0.13 70);
+    --destructive: oklch(0.56 0.2 27);
+    --surface-sunken: oklch(0.108 0.005 60);
+    --surface-raised: oklch(0.224 0.005 60);
+    --border: oklch(0.246 0.005 60);
+    --control-border: oklch(0.56 0.008 60);
+    --ring: oklch(0.6 0.12 200);
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "parlance",
+  "private": true,
+  "scripts": {
+    "wt:dev": "nx run web:dev",
+    "build": "nx run web:ci-build"
+  },
+  "devDependencies": {
+    "nx": "21.6.3"
+  }
+}

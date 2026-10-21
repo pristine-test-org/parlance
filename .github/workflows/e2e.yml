@@ -1,0 +1,16 @@
+name: e2e
+on:
+  workflow_dispatch:
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    env:
+      PLAYWRIGHT_BASE_URL: http://127.0.0.1:3000
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install && npm install --prefix apps/web
+      - run: npx playwright install --with-deps chromium
+      - run: npm run build --prefix apps/web && (npm start --prefix apps/web &) && npx wait-on $PLAYWRIGHT_BASE_URL

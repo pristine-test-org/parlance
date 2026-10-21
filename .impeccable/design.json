@@ -1,0 +1,14 @@
+{
+  "generatedFrom": "apps/web/app/globals.css",
+  "note": "Auto-generated sidecar. Do not edit by hand; run npm run design:sync.",
+  "theme": { "default": "dark", "hue": 60 },
+  "fonts": { "display": "Newsreader", "body": "Inter", "mono": "JetBrains Mono" },
+  "colors": {
+    "primary": { "light": "oklch(0.45 0.12 200)", "dark": "oklch(0.6 0.12 200)" },
+    "accent": { "light": "oklch(0.62 0.13 70)", "dark": "oklch(0.7 0.13 70)" },
+    "background": { "light": "oklch(0.985 0.003 60)", "dark": "oklch(0.138 0.005 60)" },
+    "card": { "light": "oklch(0.998 0.001 60)", "dark": "oklch(0.19 0.005 60)" },
+    "border": { "light": "oklch(0.922 0.003 60)", "dark": "oklch(0.246 0.005 60)" }
+  },
+  "radius": { "sm": "0.375rem", "md": "0.5rem", "lg": "0.75rem", "xl": "1rem" }
+}

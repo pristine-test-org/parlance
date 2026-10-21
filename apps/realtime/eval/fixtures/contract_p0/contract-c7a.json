@@ -1,0 +1,1 @@
+{ "scenario": "client-no", "expect": { "notes": 2, "quotesResolve": true } }

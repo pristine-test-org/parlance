@@ -1,0 +1,22 @@
+name: test
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npm install
+        working-directory: apps/web
+      - run: ./node_modules/.bin/nx run web:ci-build --outputStyle=static
+      - name: Fonts are self-hosted
+        run: |
+          count=0
+          while IFS= read -r -d '' f; do count=$((count+1)); done < <(find apps/web/.next/static/media -type f -name "*.woff2" -print0)
+          test "$count" -gt 0

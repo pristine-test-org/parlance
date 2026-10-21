@@ -1,0 +1,1 @@
+{ "turns": [{ "speaker": "member", "text": "What I wanted to say was", "atMs": 0 }, { "speaker": "member", "text": "that I'm ready for more.", "atMs": 2400 }], "expect": { "interrupted": true, "resumed": true } }

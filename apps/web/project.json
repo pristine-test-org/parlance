@@ -1,0 +1,10 @@
+{
+  "name": "web",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/web",
+  "targets": {
+    "dev": { "command": "next dev", "options": { "cwd": "apps/web" } },
+    "ci-build": { "command": "next build", "options": { "cwd": "apps/web" }, "outputs": ["{projectRoot}/.next"] }
+  }
+}
