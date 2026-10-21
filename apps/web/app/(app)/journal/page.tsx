@@ -6,7 +6,10 @@ export default function Page() {
     <>
       <PageHero title="Journal" lead="How the real conversations went." />
       <SectionHeading>Entries</SectionHeading>
-      <Card>Nothing logged yet. Add an entry after your next real conversation.</Card>
+      <Card>
+        <p>Nothing logged yet. Add an entry after your next real conversation.</p>
+        <p className="mt-2 text-sm text-muted-foreground">Try three lines: what you asked for, what they said, what you would change.</p>
+      </Card>
     </>
   );
 }
