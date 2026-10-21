@@ -1,5 +1,12 @@
 ---
 name: Harbour Dusk
+typography:
+  display:
+    fontFamily: Newsreader
+  body:
+    fontFamily: Inter
+  mono:
+    fontFamily: JetBrains Mono
 rounded:
   sm: 6px
   md: 8px
