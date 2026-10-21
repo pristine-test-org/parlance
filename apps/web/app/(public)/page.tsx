@@ -14,6 +14,7 @@ export default function LandingPage() {
           Parlance gives you a counterpart who pushes back the way your manager, client or partner will, then shows you what landed and what to change next time.
         </p>
         <Button asChild size="lg"><Link href="/login?redirect=%2Fpractice">Start a practice</Link></Button>
+        <p className="text-sm text-muted-foreground">Your first three sessions are free. No card needed.</p>
       </section>
       <section className="mt-24 grid gap-10 md:grid-cols-3">
         {[
